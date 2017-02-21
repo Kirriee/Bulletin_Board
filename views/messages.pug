@@ -4,7 +4,8 @@ html
     title Bulletin Board
     link(rel='stylesheet', type='text/css', href='../css/style.css')
     link(href='https://fonts.googleapis.com/css?family=Oswald', rel='stylesheet')
-  body
+    link(href='https://fonts.googleapis.com/css?family=Raleway', rel='stylesheet')
+  body.messageboard
     header
       ul
         li
@@ -13,7 +14,10 @@ html
           a(href='/messages') Show Messages
     h1  Here are your Messages
     each content in key
-        h3 #{content.title} 
-        h3 #{content.body} 
-        
+      .row
+        .card
+          i.pin
+            h2 #{content.title} 
+            p #{content.body}
+      
         

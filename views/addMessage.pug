@@ -11,13 +11,13 @@ html
           a(href='/') Add Message
         li
           a(href='/messages') Show Messages
-    h1  Post your message here
-    .center
+    .container
+      h1  Post your message here
       form(action='/messages', method="post") 
         | Title:
         br
         |  
-        input(type='text', name='title', size='40', placeholder='Type the Title of your Message Here')
+        input(type='text', name='title', size='30', placeholder='Type the Title of your Message Here')
         br
         |  Body:
         br
@@ -25,4 +25,4 @@ html
         textarea(name='body', rows='10', cols='30', placeholder='Type your message here')
         br
         |  
-        button(type='submit') Submit
+        button(class="buttonblue",type='submit') Submit

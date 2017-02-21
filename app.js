@@ -67,7 +67,7 @@ db
         //turns into INSERT INTO "people" ("id", "name") VALUES (DEFAULT, 'Jane Smith')
         return Message.create({
         	title: 'Jane Smith',
-        	body: 'Ik rook jonkooos'
+        	body: 'This is a test message'
         })
     }).then((message) =>{
     	console.log('message is created')
