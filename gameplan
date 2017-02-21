@@ -1,0 +1,14 @@
+
+
+
+2 html pages with navbar:
+ 1) show people a form where they can add message
+ 2) show messages. 
+
+postgres database:
+- Table name: messages
+- 3 colomns:
+	- id: serial primary key
+	- title: text
+	- body: text
+

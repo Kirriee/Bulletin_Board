@@ -1,0 +1,19 @@
+doctype html
+html
+  head
+    title Bulletin Board
+    link(rel='stylesheet', type='text/css', href='../css/style.css')
+    link(href='https://fonts.googleapis.com/css?family=Oswald', rel='stylesheet')
+  body
+    header
+      ul
+        li
+          a(href='/') Add Message
+        li
+          a(href='/messages') Show Messages
+    h1  Here are your Messages
+    each content in key
+        h3 #{content.title} 
+        h3 #{content.body} 
+        
+        

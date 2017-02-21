@@ -1,0 +1,28 @@
+doctype html
+html
+  head
+    title Bulletin Board
+    link(rel='stylesheet', type='text/css', href='../css/style.css')
+    link(href='https://fonts.googleapis.com/css?family=Oswald', rel='stylesheet')
+  body
+    header
+      ul
+        li
+          a(href='/') Add Message
+        li
+          a(href='/messages') Show Messages
+    h1  Post your message here
+    .center
+      form(action='/messages', method="post") 
+        | Title:
+        br
+        |  
+        input(type='text', name='title', size='40', placeholder='Type the Title of your Message Here')
+        br
+        |  Body:
+        br
+        |  
+        textarea(name='body', rows='10', cols='30', placeholder='Type your message here')
+        br
+        |  
+        button(type='submit') Submit

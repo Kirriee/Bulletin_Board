@@ -1,0 +1,53 @@
+
+body{
+	font-family: 'Oswald', sans-serif;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #1730ec ;
+    z-index: 2;
+}
+
+li {
+	float: left;
+}
+
+li a {
+    display: block;
+    color: #fff;
+    padding: 14px 16px;
+    text-decoration: none;
+    text-align: center;
+}
+
+/* Change the link color on hover */
+li a:hover {
+    background-color: #c5c2c2;
+    color: white;
+}
+
+.center {
+	text-align: center;
+	height: 50%;
+	width: 50%;
+	top: 20%;
+	left: 25%;
+	padding: 40px;
+	position: absolute;
+	display:block;
+     z-index: 1;
+
+}
+
+
+h1{
+    text-align: center;
+}
+
+.button {
+    background-color: #4CAF50;
+   }
