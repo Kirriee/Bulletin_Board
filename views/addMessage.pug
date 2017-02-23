@@ -4,25 +4,29 @@ html
     title Bulletin Board
     link(rel='stylesheet', type='text/css', href='../css/style.css')
     link(href='https://fonts.googleapis.com/css?family=Oswald', rel='stylesheet')
+    link(href='https://fonts.googleapis.com/css?family=Raleway', rel='stylesheet')
   body
     header
-      ul
-        li
-          a(href='/') Add Message
-        li
-          a(href='/messages') Show Messages
-    .container
+      nav
+        ul
+          li
+            a(href='/') Add Message
+          li
+            a(href='/messages') Show Messages
+    .wrapper
       h1  Post your message here
-      form(action='/messages', method="post") 
-        | Title:
-        br
-        |  
-        input(type='text', name='title', size='30', placeholder='Type the Title of your Message Here')
-        br
-        |  Body:
-        br
-        |  
-        textarea(name='body', rows='10', cols='30', placeholder='Type your message here')
-        br
-        |  
-        button(class="buttonblue",type='submit') Submit
+      .container
+        form(action='/messages', method="post") 
+          p| Title:
+          |  
+          input(type='text', name='title', size='30', placeholder='Type the title of the message here', maxlength="15")
+          small#small| Maximum of 15 characters
+          br
+         
+          p|  Body:
+          |  
+          textarea(name='body', rows='10', cols='30', placeholder='Type your message here', maxlength="167")
+          small#small| Maximum of 167 characters
+          br
+          |  
+          button(class="buttonblue",type='submit') Submit

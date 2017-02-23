@@ -29,10 +29,13 @@ app.use(bodyParser.urlencoded({     // to ssupport URL-encoded bodies
 
 app.use(express.static('statics'));
 
+// get requqest index page
+
 app.get("/", function(request, response){
 	response.render('addMessage');
 });
 
+//get request /messages and sending data along
 app.get("/messages", function(request, response){
 	Message.findAll()
 	.then (function(myMessages){
@@ -42,17 +45,20 @@ app.get("/messages", function(request, response){
 	
 });
 
+//post request /messages
 app.post("/messages", function(request, response){
 	Message.create({
 		title: request.body.title,
 		body: request.body.body
-	}).then( f => {
+	}).then( function() {
 		response.redirect("/messages")
 	})
 	console.log("ik doe het")
 	
 	
 })
+
+//define the table message
 
 var Message = db.define('message', {
 	title: Sequelize.STRING,
@@ -63,9 +69,8 @@ db
     //sync the models
     .sync({force:true})
     .then(function(){
-        //then create a person
-        //turns into INSERT INTO "people" ("id", "name") VALUES (DEFAULT, 'Jane Smith')
-        return Message.create({
+        //then create first message
+       return Message.create({
         	title: 'Jane Smith',
         	body: 'This is a test message'
         })
@@ -73,7 +78,7 @@ db
     	console.log('message is created')
     })
 
-
+	//listening to localhost:3000
     app.listen(3000, function() {
     	console.log('server has started');
     });

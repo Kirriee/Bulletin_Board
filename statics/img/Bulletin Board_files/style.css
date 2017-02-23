@@ -3,9 +3,7 @@ body{
 
 }
 
-/*navbar*/
-
-nav ul {
+ul {
     list-style-type: none;
     margin: 0;
     padding: 20;
@@ -15,60 +13,32 @@ nav ul {
     font-weight: bold;
 }
 
-nav li {
+li {
     float: left;
 }
 
-nav li a {
+li a {
     display: block;
     color: #fff;
     padding: 14px 16px;
     text-decoration: none;
     text-align: center;
-    width: 152px;
 }
 
 /* Change the link color on hover */
-nav li a:hover {
+li a:hover {
     background-color: #004860;
     color: white;
-}
-
-/*end navbar*/
-
-.wrapper{
-   width: 100%;
-    max-width: 960px;
-    margin: 0 auto;
 }
 .container{
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    margin-top: 50px;
+    font-weight: bold
 }
 
-.container p{
- font-weight: bold;
- padding: 0;
- margin: 0;
-}
-
-.flex-container{
-    display: flex;
-    flex-wrap:wrap;
-    height: 680px;
-    justify-content: center;
-}
-
-h1 {
-    text-align: center;
-    font-family: 'Raleway', sans-serif;
-    margin: 40px;
-}
-
-h2 {
+h1, h2, h3{
     text-align: center;
     font-family: 'Raleway', sans-serif;
 }
@@ -76,11 +46,11 @@ h2 {
 .card {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
-    width: 228px;
-    height: 228px;
+    width: 20%;
+    height: 200px;
     /*  border-radius: 5px;*/
     background-color: #FFFFA5;
-   /* float:left;*/
+    float:left;
     padding: 10px;
     margin: 10px;
     -webkit-transform: rotate(2deg);
@@ -88,13 +58,9 @@ h2 {
   -o-transform: rotate(2deg);
   -ms-transform: rotate(2deg);
   transform: rotate(2deg);
-  flex: 1 1 auto;
+  
 
 }
-.card p {
-        margin-left: 20px;
-    }
-
 .pin {
   background-color: #aaa;
   display: block;
@@ -142,7 +108,15 @@ h2 {
   -o-transform-origin: 50% 100%;
   }
 
-/*form*/
+  .row{
+    margin: 50px 50px;
+}
+
+/*.messageboard{
+    background-image: url("../img/kurk.jpg");
+    height: 600px;
+    background-repeat: no-repeat;
+    }*/
 
     button {
         border: 2px solid #008CBA;
@@ -176,22 +150,20 @@ h2 {
         border: 1px solid #ccc;
         resize: none;
         margin-top: 10px;
-        font-family: 'Raleway', sans-serif;
     }
 
 
     input[type=text] {
         border: 1px solid #ccc;
+        margin-bottom: 10px;
         margin-top: 10px;
         padding: 5px 10px;
-        font-family: 'Raleway', sans-serif;
     }
 
-    #small{
-      font-size: 10px;
-      display: block;
+    p {
+        margin-left: 20px;
     }
 
-   /* end form*/
-
-  
+    .title {
+        text-align-right;
+    }

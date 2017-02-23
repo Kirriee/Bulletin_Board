@@ -5,18 +5,20 @@ html
     link(rel='stylesheet', type='text/css', href='../css/style.css')
     link(href='https://fonts.googleapis.com/css?family=Oswald', rel='stylesheet')
     link(href='https://fonts.googleapis.com/css?family=Raleway', rel='stylesheet')
-  body.messageboard
+  body
     header
-      ul
-        li
-          a(href='/') Add Message
-        li
-          a(href='/messages') Show Messages
+      nav
+        ul
+          li
+            a(href='/') Add Message
+          li
+            a(href='/messages') Show Messages
     h1  Here are your Messages
-    each content in key
-      .row
-        .card
-          i.pin
+    .flex-container
+      each content in key
+        .row
+          .card
+            i.pin
             h2 #{content.title} 
             p #{content.body}
       
