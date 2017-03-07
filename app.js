@@ -1,3 +1,4 @@
+//requiring libraries
 const express = require('express')
 const app = express ()
 const pg = require('pg')
@@ -8,7 +9,7 @@ const bodyParser = require ('body-parser')
 
 var db = new Sequelize ('postgres://' + process.env.POSTGRES_USER + ':' + process.env.POSTGRES_PASSWORD + '@localhost/bulletinboard');
 
-// Testing connection
+// Testing connection Database
 db
 .authenticate()
 .then(function(err) {
@@ -29,7 +30,7 @@ app.use(bodyParser.urlencoded({     // to ssupport URL-encoded bodies
 
 app.use(express.static('statics'));
 
-// get requqest index page
+// get request index page
 
 app.get("/", function(request, response){
 	response.render('addMessage');
@@ -58,7 +59,7 @@ app.post("/messages", function(request, response){
 	
 })
 
-//define the table message
+//defining the message model
 
 var Message = db.define('message', {
 	title: Sequelize.STRING,
@@ -69,16 +70,11 @@ db
     //sync the models
     .sync({force:true})
     .then(function(){
-        //then create first message
-       return Message.create({
-        	title: 'Jane Smith',
-        	body: 'This is a test message'
-        })
     }).then((message) =>{
     	console.log('message is created')
     })
 
-	//listening to localhost:3000
-    app.listen(3000, function() {
-    	console.log('server has started');
-    });
+	//Running the server on Localhost:3000
+	app.listen(3000, function() {
+		console.log('server has started');
+	});
